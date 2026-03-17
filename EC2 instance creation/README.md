@@ -67,6 +67,7 @@ provider "aws" {
 EC2 Instance
 resource "aws_instance" "Trial-Instance" {
 
+```text
 Parameter	                            Description
 ami	                            AMI ID (Free tier eligible recommended)
 instance_type	                Instance size (t3.micro free tier eligible)
@@ -75,6 +76,8 @@ subnet_id	                    Subnet for deployment
 key_name	                    SSH key pair name
 associate_public_ip_address	    Enables public IP
 tags	                        Instance name
+```
+
 
 🚀 Deployment Steps
 
