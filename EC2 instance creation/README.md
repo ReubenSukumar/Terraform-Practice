@@ -17,11 +17,14 @@ Tag the instance for identification
 
 🧱 Architecture
 
+```text
 Terraform → AWS Provider → EC2 Instance
                          ├── Subnet
                          ├── Security Group
                          ├── Key Pair
                          └── Public IP
+```
+
 
 
 ⚙️ Prerequisites
@@ -47,10 +50,12 @@ Subnet (subnet-xxxxxxxx)
 Key Pair (.pem file)
 
 📁 Project Structure
+
+```text
 .
 ├── main.tf          # Terraform configuration file
 └── README.md        # Project documentation
-
+```
 
 🔧 Configuration Details
 Provider
