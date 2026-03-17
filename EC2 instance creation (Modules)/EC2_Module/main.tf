@@ -11,6 +11,6 @@ resource "aws_instance" "Trial_Instance" {
     Name = var.EC2_name                                # Instance Name variable
   }
   key_name                    = var.key_pair           # .pem file variable
-  associate_public_ip_address = var.assign_public_ip   # Auto assign public IP varibale
+  associate_public_ip_address = var.assign_public_ip   # Auto assign public IP variable
 }
 
