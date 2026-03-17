@@ -77,6 +77,8 @@ associate_public_ip_address	    Enables public IP
 tags	                        Instance name
 
 🚀 Deployment Steps
+
+```text
 1️⃣ Initialize Terraform
 terraform init
 2️⃣ Validate Configuration
@@ -85,31 +87,28 @@ terraform validate
 terraform plan
 4️⃣ Apply Configuration
 terraform apply
+```
 
 Type yes when prompted.
 
+
 🌐 Access EC2 Instance
 
-Once deployed:
+Once deployed: Get Public IP from AWS Console
 
-Get Public IP from AWS Console
 
-Connect using SSH:
-
-ssh -i Test.pem ubuntu@<PUBLIC_IP>
+Connect using SSH: ssh -i Test.pem ubuntu@<PUBLIC_IP>
 🧹 Destroy Resources
 
-To avoid AWS charges:
 
+To avoid AWS charges:
 terraform destroy
 ⚠️ Important Notes
 
 Ensure AMI is valid for your region (us-east-1)
 
-Security group must allow:
-
-SSH (port 22)
+Security group must allow: SSH (port 22)
 
 Key pair must exist in AWS
 
-Avoid hardcoding IDs in production (use variables instead)
+**Avoid hardcoding IDs in production (use variables instead)**
