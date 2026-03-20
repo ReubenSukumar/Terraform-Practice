@@ -224,7 +224,7 @@ AWS EC2 provisioning via IaC
 
 
 
-👨‍💻 Author
+👨‍💻 **Author**
 
-Reuben
-DevOps Enthusiast | AWS | Terraform | CI/CD
+**Reuben**
+**DevOps / Cloud Enthusiast 🚀**

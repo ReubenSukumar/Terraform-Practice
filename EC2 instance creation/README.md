@@ -115,3 +115,9 @@ Security group must allow: SSH (port 22)
 Key pair must exist in AWS
 
 **Avoid hardcoding IDs in production (use variables instead)**
+
+
+👨‍💻 **Author**
+
+**Reuben**
+**DevOps / Cloud Enthusiast 🚀**
