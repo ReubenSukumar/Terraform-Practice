@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 module "Testing_Instance" {                 # Module name used in Module_EC2/main.tf

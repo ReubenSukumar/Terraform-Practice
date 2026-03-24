@@ -1,0 +1,1 @@
+ec2name = "Dev-Terra-Instance"      # Instance Name

@@ -81,14 +81,20 @@ tags	                        Instance name
 
 🚀 Deployment Steps
 
-```text
 1️⃣ Initialize Terraform
+```text
 terraform init
+```
 2️⃣ Validate Configuration
+```text
 terraform validate
+```
 3️⃣ Preview Changes
+```text
 terraform plan
+```
 4️⃣ Apply Configuration
+```text
 terraform apply
 ```
 

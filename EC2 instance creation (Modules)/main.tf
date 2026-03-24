@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1" # Region where EC2 will be deployed
+  region = "us-east-1"                             # Region where EC2 will be deployed
 }
 
 module "Trial_Instance" {                          # Module name used in EC2_Module/main.tf
