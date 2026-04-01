@@ -4,5 +4,6 @@
 crash.log
 override.tf
 override.tf.json
+*.lock.hcl
 *_override.tf
 *_override.tf.json
