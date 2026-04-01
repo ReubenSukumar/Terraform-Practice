@@ -202,6 +202,8 @@ Multi-AZ architecture
 Internet Gateway usage
 ```
 Network isolation principles
+
+
 👨‍💻 **Author**
 
 **Reuben**
