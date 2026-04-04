@@ -6,14 +6,14 @@ This project provisions a production-style multi-tier architecture on AWS using 
 
 The infrastructure consists of:
 
-Custom VPC
-->Public, Private, and DB subnets across 2 Availability Zones
-->Internet Gateway for public access
-->NAT Instance for private subnet outbound traffic
-->Public & Private Application Load Balancers (ALB)
-->Multiple EC2 instances (Web, App, DB layers)
-->Layered Security Groups
-->Target Groups & Health Checks
+-> Custom VPC  
+-> Public, Private, and DB subnets across 2 Availability Zones  
+-> Internet Gateway for public access  
+-> NAT Instance for private subnet outbound traffic  
+-> Public & Private Application Load Balancers (ALB)  
+-> Multiple EC2 instances (Web, App, DB layers)  
+-> Layered Security Groups  
+-> Target Groups & Health Checks  
 
 **🧱 Components**
 
