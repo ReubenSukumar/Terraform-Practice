@@ -114,11 +114,11 @@ terraform destroy
 ->Health check endpoint /health must be implemented in your app
 
 **📈 Future Improvements**
-->🔄 Replace NAT Instance with NAT Gateway
-->⚡ Add Auto Scaling Groups (ASG)
-->🌍 Integrate with CloudFront + Route 53
-->🔐 Add HTTPS using ACM
-->📊 Add monitoring (Prometheus + Grafana)
+->🔄 Replace NAT Instance with NAT Gateway  
+->⚡ Add Auto Scaling Groups (ASG)  
+->🌍 Integrate with CloudFront + Route 53  
+->🔐 Add HTTPS using ACM  
+->📊 Add monitoring (Prometheus + Grafana)  
 
 **📂 Project Structure**
 .
