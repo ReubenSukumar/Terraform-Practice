@@ -19,13 +19,16 @@ The infrastructure consists of:
 
 **🌐 Networking**  
 VPC CIDR: 20.0.0.0/16  
-Public Subnets:  
+
+**Public Subnets:**   
 20.0.1.0/24 (us-east-1a)  
 20.0.2.0/24 (us-east-1b)  
-Private Subnets:  
+
+**Private Subnets:**    
 20.0.3.0/24 (us-east-1a)  
 20.0.4.0/24 (us-east-1b)  
-DB Subnets:  
+
+**DB Subnets:**    
 20.0.5.0/24 (us-east-1a)  
 20.0.6.0/24 (us-east-1b)  
 
