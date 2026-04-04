@@ -47,15 +47,17 @@ DB SG	MySQL (3306) between DB and App layers
 ->2 EC2 instances (Web Layer)  
 ->Hosted in public subnets  
 ->Attached to Public ALB  
+  
 **Private Instances**  
 ->2 EC2 instances (Application Layer)  
 ->Hosted in private subnets  
 ->Connected via Private ALB  
+  
 **Database Instances**  
 Master DB (1a)  
 Slave DB (1b)  
 Hosted in DB private subnets  
-
+  
 **⚖️ Load Balancers**  
 
 **Public ALB**  
@@ -70,6 +72,7 @@ Routes traffic on port 3000 to private EC2 instances
 Public ALB Target Group → Port 80  
 Private ALB Target Group → Port 3000  
 Health Check Path: /health  
+
 
 **🔑 Key Features**  
 ✅ Multi-AZ deployment (High Availability)  
@@ -105,7 +108,8 @@ terraform apply
 5. Destroy Infrastructure
 ```text
 terraform destroy
-```
+```  
+
 **⚠️ Important Notes**  
 ->AMI ID is region-specific (us-east-1)  
 ->NAT is implemented using a NAT Instance (not NAT Gateway)  
@@ -113,6 +117,7 @@ terraform destroy
 ->SSH access is restricted to a specific IP (122.171.19.34/32)  
 ->Health check endpoint /health must be implemented in your app  
 
+  
 **📈 Future Improvements**  
 ->🔄 Replace NAT Instance with NAT Gateway    
 ->⚡ Add Auto Scaling Groups (ASG)  
@@ -120,14 +125,15 @@ terraform destroy
 ->🔐 Add HTTPS using ACM  
 ->📊 Add monitoring (Prometheus + Grafana)    
 
+  
 **📂 Project Structure**  
 .  
 ├── main.tf        # Complete infrastructure definition  
 └── README.md      # Documentation  
   
 **NOTE:**  
-Update the <MY IP> in Terraform-Public-SG;  
-Update the pem file name in the EC2 block;  
+Update the <MY IP> in Terraform-Public-SG   
+Update the pem file name in the EC2 block    
 
 **👨‍💻 Author**
 
