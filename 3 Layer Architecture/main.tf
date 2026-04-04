@@ -179,7 +179,7 @@ resource "aws_security_group" "T_Pub_SG" {                                      
 
 resource "aws_vpc_security_group_ingress_rule" "allow_ssh_pub" {
   security_group_id	= aws_security_group.T_Pub_SG.id
-  cidr_ipv4         	= "<MY-IP>"                                               # Allow SSH from My IP 
+  cidr_ipv4         	= "<MY-IP>"                                                        # Allow SSH from My IP 
   from_port         	= 22
   ip_protocol       	= "tcp"
   to_port           	= 22
@@ -392,7 +392,7 @@ resource "aws_instance" "Terraform-Pub-Instance-1a" {
   tags = {
     Name = "Terraform-Public-Instance-1a"                                 # Instance Name
   }
-  key_name                    = "Test"                                # .pem file name
+  key_name                    = "Test"                                    # .pem file name
   associate_public_ip_address = true                                      # Auto assign public IP is enabled
 }
 
@@ -404,7 +404,7 @@ resource "aws_instance" "Terraform-Pub-Instance-1b" {
   tags = {
     Name = "Terraform-Public-Instance-1b"                                 # Instance Name
   }
-  key_name                    = "Test"                                # .pem file name
+  key_name                    = "Test"                                    # .pem file name
   associate_public_ip_address = true                                      # Auto assign public IP is enabled
 }
 
@@ -416,7 +416,7 @@ resource "aws_instance" "Terraform-Priv-Instance-1a" {
   tags = {
     Name = "Terraform-Private-Instance-1a"                                # Instance Name
   }
-  key_name                    = "Test"                                # .pem file name
+  key_name                    = "Test"                                    # .pem file name
   associate_public_ip_address = false                                     # Auto assign public IP is disabled
 }
 
@@ -428,7 +428,7 @@ resource "aws_instance" "Terraform-Priv-Instance-1b" {
   tags = {
     Name = "Terraform-Private-Instance-1b"                                # Instance Name
   }
-  key_name                    = "Test"                                # .pem file name
+  key_name                    = "Test"                                    # .pem file name
   associate_public_ip_address = false                                     # Auto assign public IP is disabled
 }
 
@@ -440,7 +440,7 @@ resource "aws_instance" "Terraform_DB_Pri_Instance_1a" {
   tags = {
     Name = "Terraform-DB-Master-Server-1a"                                # Instance Name
   }
-  key_name                    = "Test"                                # .pem file name
+  key_name                    = "Test"                                    # .pem file name
   associate_public_ip_address = false                                     # Auto assign public IP is disabled
 }
 
@@ -452,7 +452,7 @@ resource "aws_instance" "Terraform_DB_Pri_Instance_1b" {
   tags = {
     Name = "Terraform-DB-Slave-Server-1b"                                 # Instance Name
   }
-  key_name                    = "Test"                                # .pem file name
+  key_name                    = "Test"                                    # .pem file name
   associate_public_ip_address = false                                     # Auto assign public IP is disabled
 }
 
