@@ -134,9 +134,8 @@ terraform destroy
 ├── main.tf        # Complete infrastructure definition  
 └── README.md      # Documentation  
   
-**NOTE:**  
-Update the <MY IP> in Terraform-Public-SG   
-Update the pem file name in the EC2 block    
+**NOTE:**  Update the <MY IP> in Terraform-Public-SG     
+           Update the pem file name in the EC2 block     
 
 **👨‍💻 Author**
 
