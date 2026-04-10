@@ -97,14 +97,14 @@ User → Public ALB → NGINX (Public EC2)
 ```
 
 🔧 Prerequisites  
-->AWS Account  
-->Terraform installed  
-->SSH key pair (.pem)  
-->IAM permissions for:  
-->EC2  
-->VPC  
-->ALB  
-->Security Groups
+AWS Account  
+Terraform installed  
+SSH key pair (.pem)  
+IAM permissions for:  
+EC2  
+VPC  
+ALB  
+Security Groups
 
 
 🚀 How to Deploy  
