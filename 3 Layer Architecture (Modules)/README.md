@@ -160,12 +160,14 @@ SSH restricted to specific IP
 
 
 ⚠️ Notes  
+```text
 Uses NAT Instance instead of NAT Gateway (cost optimization)  
 AMI is region-specific (us-east-1)  
-->Update:  
+Update:  
 SSH IP  
 Key pair name  
 Passwords (for production) 
+```
 
 
 📌 Future Improvements  
