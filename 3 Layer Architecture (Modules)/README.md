@@ -153,27 +153,27 @@ CREATE USER 'repli'@'20.0.6%' IDENTIFIED BY 'password';
 ```
 
 🔐 Security Highlights  
-->No public access to backend or DB  
-->DB accessible only from private instances  
-->ALB-based routing ensures isolation  
-->SSH restricted to specific IP  
+No public access to backend or DB  
+DB accessible only from private instances  
+ALB-based routing ensures isolation  
+SSH restricted to specific IP  
 
 
 ⚠️ Notes  
-->Uses NAT Instance instead of NAT Gateway (cost optimization)  
-->AMI is region-specific (us-east-1)  
+Uses NAT Instance instead of NAT Gateway (cost optimization)  
+AMI is region-specific (us-east-1)  
 ->Update:  
-->SSH IP  
-->Key pair name  
-->Passwords (for production) 
+SSH IP  
+Key pair name  
+Passwords (for production) 
 
 
 📌 Future Improvements  
-->Auto Scaling Groups (ASG)  
-->CloudFront integration  
-->CI/CD pipeline  
-->Monitoring (Prometheus + Grafana)  
-->HTTPS with ACM  
+Auto Scaling Groups (ASG)  
+CloudFront integration  
+CI/CD pipeline  
+Monitoring (Prometheus + Grafana)  
+HTTPS with ACM  
 
 
 **👨‍💻 Author**  
