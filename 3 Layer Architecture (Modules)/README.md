@@ -93,7 +93,7 @@ User → Public ALB → NGINX (Public EC2)
 ✅ Health checks for resilience
 ```
 
-🔧 Prerequisites
+🔧 Prerequisites  
 ->AWS Account  
 ->Terraform installed  
 ->SSH key pair (.pem)  
