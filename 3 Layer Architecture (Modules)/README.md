@@ -1,8 +1,8 @@
-🚀 3-Tier Architecture on AWS using Terraform  
+**🚀 3-Tier Architecture on AWS using Terraform**  
 
 This project provisions a complete 3-tier architecture on AWS using Terraform, following best practices for modular infrastructure, scalability, and automation.
 
-📌 Architecture Overview  
+**📌 Architecture Overview**    
 
 This setup includes:
 ```text
@@ -15,7 +15,7 @@ Public ALB → Frontend
 Private ALB → Backend
 Security Groups → Controlled access between layers
 ```
-🏗️ Project Structure
+**🏗️ Project Structure**  
 ```text
 3 Layer Architecture (Modules)
 │
@@ -48,7 +48,7 @@ Security Groups → Controlled access between layers
 └── outputs.tf
 ```
 
-⚙️ Modules Description
+**⚙️ Modules Description**  
 
 🔹 VPC Module  
 Creates VPC, subnets (public, private, DB)  
@@ -85,7 +85,7 @@ User → Public ALB → NGINX (Public EC2)
      → MySQL Master → MySQL Slave 
 ```      
 
-🧠 Key Features  
+**🧠 Key Features**    
 ```text
 ✅ Modular Terraform design
 ✅ Highly available (Multi-AZ deployment)
@@ -96,7 +96,7 @@ User → Public ALB → NGINX (Public EC2)
 ✅ Health checks for resilience
 ```
 
-🔧 Prerequisites  
+**🔧 Prerequisites**    
 AWS Account  
 Terraform installed  
 SSH key pair (.pem)  
@@ -107,7 +107,7 @@ ALB
 Security Groups
 
 
-🚀 How to Deploy  
+**🚀 How to Deploy**    
 1. Initialize Terraform
 ```text
 terraform init
@@ -124,7 +124,7 @@ terraform plan
 ```text
 terraform apply
 ```
-📤 Outputs  
+**📤 Outputs**    
 
 After deployment, Terraform provides:  
 
@@ -135,11 +135,13 @@ Instance Names
 🌐 Application Access  
 Access via Public ALB DNS  
 
-NGINX serves:  
+NGINX serves: 
+```text 
 / → Static frontend  
 /api/ → Backend (via Private ALB)  
+``` 
 
-🛢️ Database Setup  
+**🛢️ Database Setup**  
 Master DB  
 GTID enabled  
 Binary logging enabled  
@@ -152,14 +154,14 @@ Replication user:
 CREATE USER 'repli'@'20.0.6%' IDENTIFIED BY 'password';
 ```
 
-🔐 Security Highlights  
+**🔐 Security Highlights**    
 No public access to backend or DB  
 DB accessible only from private instances  
 ALB-based routing ensures isolation  
 SSH restricted to specific IP  
 
 
-⚠️ Notes  
+**⚠️ Notes**  
 ```text
 Uses NAT Instance instead of NAT Gateway (cost optimization)  
 AMI is region-specific (us-east-1)  
@@ -170,7 +172,7 @@ Passwords (for production)
 ```
 
 
-📌 Future Improvements  
+**📌 Future Improvements**    
 Auto Scaling Groups (ASG)  
 CloudFront integration  
 CI/CD pipeline  
