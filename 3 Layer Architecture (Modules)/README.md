@@ -69,8 +69,9 @@ MySQL GTID replication (automated)
 🔹 ALB & Target Groups Module  
 Public ALB → Routes traffic to frontend (port 80)   
 Private ALB → Routes traffic to backend (port 3000)   
+Health checks on /health endpoint  
 
-Health checks on /health endpoint   
+
 🔹 Security Group Module   
 Fine-grained access control between:  
 Public ↔ Private  
@@ -78,9 +79,11 @@ Private ↔ DB
 ALB ↔ Instances  
 Restricts SSH access to your IP    
 🔁 Traffic Flow  
+```text
 User → Public ALB → NGINX (Public EC2)  
      → Private ALB → Backend EC2  
-     → MySQL Master → MySQL Slave  
+     → MySQL Master → MySQL Slave 
+```      
 
 🧠 Key Features  
 ```text
