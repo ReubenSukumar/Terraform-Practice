@@ -49,11 +49,13 @@ Security Groups → Controlled access between layers
 ```
 
 ⚙️ Modules Description
+
 🔹 VPC Module  
 Creates VPC, subnets (public, private, DB)  
 Internet Gateway + Route Tables  
 NAT routing via public instance  
 👉 Example CIDR: 20.0.0.0/16
+
 🔹 EC2 Module  
 Public Instances (NGINX + NAT)  
 Private Instances (Backend)  
@@ -63,20 +65,23 @@ Includes:
 
 NAT setup + NGINX reverse proxy  
 MySQL GTID replication (automated)  
+
 🔹 ALB & Target Groups Module  
-Public ALB → Routes traffic to frontend (port 80)  
-Private ALB → Routes traffic to backend (port 3000)  
-Health checks on /health endpoint  
-🔹 Security Group Module  
+Public ALB → Routes traffic to frontend (port 80)   
+Private ALB → Routes traffic to backend (port 3000)   
+
+Health checks on /health endpoint   
+🔹 Security Group Module   
 Fine-grained access control between:  
 Public ↔ Private  
 Private ↔ DB  
 ALB ↔ Instances  
-Restricts SSH access to your IP  
+Restricts SSH access to your IP    
 🔁 Traffic Flow  
 User → Public ALB → NGINX (Public EC2)  
      → Private ALB → Backend EC2  
      → MySQL Master → MySQL Slave  
+
 🧠 Key Features  
 ```text
 ✅ Modular Terraform design
@@ -89,14 +94,16 @@ User → Public ALB → NGINX (Public EC2)
 ```
 
 🔧 Prerequisites
-AWS Account  
-Terraform installed  
-SSH key pair (.pem)  
-IAM permissions for:  
-EC2  
-VPC  
-ALB  
-Security Groups  
+->AWS Account  
+->Terraform installed  
+->SSH key pair (.pem)  
+->IAM permissions for:  
+->EC2  
+->VPC  
+->ALB  
+->Security Groups
+
+
 🚀 How to Deploy  
 1. Initialize Terraform
 ```text
@@ -106,7 +113,7 @@ terraform init
 ```text
 terraform validate
 ```
-3. Plan Deployment  
+3. Plan Deployment   
 ```text
 terraform plan
 ```
@@ -124,13 +131,16 @@ ALB Names & DNS
 Instance Names  
 🌐 Application Access  
 Access via Public ALB DNS  
+
 NGINX serves:  
 / → Static frontend  
 /api/ → Backend (via Private ALB)  
+
 🛢️ Database Setup  
 Master DB  
 GTID enabled  
 Binary logging enabled  
+
 Slave DB  
 Auto replication using MASTER_AUTO_POSITION=1  
 
@@ -140,27 +150,27 @@ CREATE USER 'repli'@'20.0.6%' IDENTIFIED BY 'password';
 ```
 
 🔐 Security Highlights  
-No public access to backend or DB  
-DB accessible only from private instances  
-ALB-based routing ensures isolation  
-SSH restricted to specific IP  
+->No public access to backend or DB  
+->DB accessible only from private instances  
+->ALB-based routing ensures isolation  
+->SSH restricted to specific IP  
 
 
 ⚠️ Notes  
-Uses NAT Instance instead of NAT Gateway (cost optimization)  
-AMI is region-specific (us-east-1)  
-Update:  
-SSH IP  
-Key pair name  
-Passwords (for production) 
+->Uses NAT Instance instead of NAT Gateway (cost optimization)  
+->AMI is region-specific (us-east-1)  
+->Update:  
+->SSH IP  
+->Key pair name  
+->Passwords (for production) 
 
 
 📌 Future Improvements  
-Auto Scaling Groups (ASG)  
-CloudFront integration  
-CI/CD pipeline  
-Monitoring (Prometheus + Grafana)  
-HTTPS with ACM  
+->Auto Scaling Groups (ASG)  
+->CloudFront integration  
+->CI/CD pipeline  
+->Monitoring (Prometheus + Grafana)  
+->HTTPS with ACM  
 
 
 **👨‍💻 Author**  
