@@ -167,7 +167,7 @@ terraform apply
   
 After deployment:  
   
-▪ Access your app using your custom domain 
+▪ Access your app using your custom domain  
 ▪ Example:  
 ```text
 https://johnwick.lol
