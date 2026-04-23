@@ -57,7 +57,6 @@ Security Groups → Layered access control
 ```
 
 
-```  
 **🏗️ Project Structure**  
 ```text
 3 Layer Architecture (Modules)
@@ -147,6 +146,8 @@ ALB     ↔ Instances
 ▪ Issues SSL certificate (DNS validation)  
 ▪ Automatically validates ACM using Route 53  
 ▪ Maps domain → Public ALB (Alias record)  
+
+
 **🔁 Traffic Flow**  
 ```text
 User → Domain (Route53)
@@ -218,7 +219,7 @@ Routing:
 /api/   → Backend via Private ALB
 ```
   
-NGINX proxies requests internally to backend using ALB DNS  
+▪ NGINX proxies requests internally to backend using ALB DNS  
   
 **📤 Outputs**  
   
@@ -238,14 +239,14 @@ Located in `/Scripts`:
 
 **🐬 MySQL Master (`mysql_master.sh.tpl`)**
 
-▪ Installs MySQL
-▪ Enables binary logging
-▪ Configures GTID replication
+▪ Installs MySQL  
+▪ Enables binary logging  
+▪ Configures GTID replication  
 
 **🐬 MySQL Slave (`mysql_slave.sh.tpl`)**
 
-▪ Connects to master
-▪ Starts replication automatically
+▪ Connects to master  
+▪ Starts replication automatically  
 
 **🌐 NGINX + NAT (`nginx_and_nat.sh.tpl`)**
 
@@ -262,9 +263,9 @@ Located in `/Scripts`:
 
 This project is **pipeline-ready** and can be integrated with:
 
-▪ GitHub Actions
-▪ Jenkins
-▪ GitLab CI
+▪ GitHub Actions  
+▪ Jenkins  
+▪ GitLab CI  
 
 **Typical Workflow:**
 
@@ -281,11 +282,11 @@ Master DB
 ▪ Replication user auto-created  
   
 Slave DB   
+▪ Dynamically connects using master private IP  
 ▪ Auto replication using:
 ```text
 MASTER_AUTO_POSITION = 1
-```
-▪ Dynamically connects using master private IP  
+``` 
   
 
 **🔐 Security Highlights**  
@@ -323,9 +324,9 @@ Secrets Manager for DB credentials
 
 This project is ideal for:
 
-▪ DevOps practice
-▪ AWS architecture understanding
-▪ Real-world infrastructure simulation
+▪ DevOps practice  
+▪ AWS architecture understanding  
+▪ Real-world infrastructure simulation  
 
 
 **👨‍💻 Author**    
